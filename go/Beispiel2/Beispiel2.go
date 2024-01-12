@@ -19,6 +19,11 @@ type Kunde struct {
 	kundenNr int
 }
 
+// Buerger ist eine Struktur, die das Verhalten eines Buerger darstellt.
+type Buerger struct {
+	Person
+}
+
 // Sammlung von Methoden fuer Personen
 type person interface {
 	sprechen() string
@@ -37,10 +42,12 @@ func main() {
 	p := Person{"Max"}
 	m := Mitarbeiter{Person: Person{"Bernd"}, mitarbeiterNr: 123}
 	k := Kunde{Person: Person{"Herbert"}, kundenNr: 456}
+	b := Buerger{Person: Person{"Manfred"}}
 
 	fmt.Printf(p.sprechen() + "\n")
 	fmt.Printf(m.sprechen() + "\n")
-	fmt.Printf(k.sprechen())
+	fmt.Printf(k.sprechen() + "\n")
+	fmt.Printf(b.sprechen())
 }
 
 // Beliebiger Subtyp von Person moeglich
