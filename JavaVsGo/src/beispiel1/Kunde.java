@@ -5,4 +5,9 @@ public class Kunde extends Person{
 	public Kunde(String name) {
 		super(name);
 	}
+	@Override
+	public String sprechen() {
+		return "Ich bin Kunde " + this.name;
+	}
 }
+

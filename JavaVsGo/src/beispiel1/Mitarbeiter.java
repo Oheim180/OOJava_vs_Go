@@ -5,4 +5,8 @@ public class Mitarbeiter extends Person {
 	public Mitarbeiter(String name) {
 		super(name);
 	}
+	@Override
+	public String sprechen() {
+		return "Ich bin Mitarbeiter " + this.name;
+	}
 }
